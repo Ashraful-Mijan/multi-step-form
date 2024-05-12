@@ -13,16 +13,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <AppContextProvider>
-        <body className={ubuntu.className}>
-          <div className="flex flex-col lg:flex-row min-h-screen relative">
+        <body className={`${ubuntu.className} h-full`}>
+          <div className="flex flex-col lg:flex-row h-full relative">
             <aside className="lg:min-w-[17.125rem] p-9 relative text-white h-[172px] lg:h-auto">
               <BackgroundImage />
               <StepNavigation />
             </aside>
-            <div className="flex-grow flex">
-              <main className="min-w-full lg:px-10 xl:px-28 mx-auto bg-magnolia lg:bg-white flex lg:block flex-col">
+            <div className="grow">
+              <main className="h-full min-w-full lg:px-10 xl:px-28 mx-auto bg-magnolia lg:bg-white flex lg:block flex-col">
                 {children}
               </main>
             </div>

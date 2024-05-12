@@ -57,13 +57,6 @@ const Form = () => {
     setCurrentStep((prv) => prv - 1);
   };
 
-  const handleNextStep = async (e) => {
-    if (await validateStep()) {
-      return;
-    }
-    setCurrentStep((prv) => prv + 1);
-  };
-
   const validateStep = async () => {
     let isValid = false;
 
@@ -98,6 +91,13 @@ const Form = () => {
     }
 
     return isValid;
+  };
+
+  const handleNextStep = async (e) => {
+    if (await validateStep()) {
+      return;
+    }
+    setCurrentStep((prv) => prv + 1);
   };
 
   const getCurrentStep = () => {
@@ -195,3 +195,4 @@ const Form = () => {
 };
 
 export default Form;
+// -translate-y-16 lg:translate-y-0
