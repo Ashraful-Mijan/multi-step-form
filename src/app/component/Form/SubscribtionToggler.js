@@ -2,7 +2,7 @@ import React from "react";
 
 const SubscribtionToggler = ({ checked, onChange }) => {
   return (
-    <div className="flex py-5 bg-alabaster items-center justify-center rounded-md">
+    <div className="flex py-4 bg-alabaster items-center justify-center rounded-md shadow">
       <div className="flex gap-3 items-center">
         <span
           className={`font-bold text-light-gray transition-colors duration-[.4s] ${

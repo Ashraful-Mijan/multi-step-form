@@ -23,7 +23,7 @@ const Confirmed = () => {
 
         <div className="flex flex-col items-center gap-4">
           <h4 className="font-bold text-2xl">Thank you!</h4>
-          <p className="text-center">
+          <p className="text-center text-lg text-cool-gray">
             Thanks for confirming your subscription! We hope you have fun using
             our platform. If you ever need support, please feel free to email us
             at support@loremgaming.com.

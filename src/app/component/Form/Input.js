@@ -13,7 +13,7 @@ const Input = ({ label, error, ...rest }) => {
       {/* <br /> */}
       <input
         id={label}
-        className={`rounded-lg w-full p-4 border-2 text-base font-medium border-cool-gray focus:border-marine-blue ${
+        className={`rounded-lg w-full p-4 border text-base font-medium border-light-gray focus:border-marine-blue ${
           error
             ? "border-strawberry-red focus:border-strawberry-red focus:outline-none"
             : ""

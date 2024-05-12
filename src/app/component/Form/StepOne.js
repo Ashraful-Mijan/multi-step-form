@@ -15,7 +15,7 @@ const StepOne = ({ formData, setFormData, error }) => {
         header="Personal info"
         subheader="Please Provide your name, email address and phone number"
       />
-      <div className="flex flex-col gap-8">
+      <div className="flex flex-col gap-4 lg:gap-8">
         <Input
           name="name"
           error={error.name}

@@ -136,8 +136,8 @@ const StepTwo = ({ formData, setFormData }) => {
         subheader="You have the option of the monthly or yearly billing"
       />
 
-      <div className="flex flex-col gap-14">
-        <div className="grid grid-cols-3 gap-7">
+      <div className="flex flex-col gap-7 lg:gap-11">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-3 lg:gap-7">
           {planes.map((plan, index) => {
             const { title, monthly, icon } = plan;
             return (
@@ -152,15 +152,15 @@ const StepTwo = ({ formData, setFormData }) => {
                 />
                 <label
                   htmlFor={title}
-                  className={`border-2 border-light-gray hover:bg-magnolia hover:border-purplish-blue rounded-lg inline-flex flex-col gap-14 py-9 px-5 w-full ${
+                  className={`border border-light-gray hover:bg-magnolia hover:border-purplish-blue rounded-lg inline-flex lg:flex-col gap-3 lg:gap-14 py-4 lg:py-9 px-5 w-full ${
                     formData.plan.title === title
                       ? "bg-magnolia border-purplish-blue"
                       : ""
                   }`}
                 >
-                  <div>{icon}</div>
+                  <div className="">{icon}</div>
                   <div className="flex flex-col">
-                    <p className="text-marine-blue font-medium text-3xl">
+                    <p className="text-marine-blue font-medium text-lg lg:text-3xl">
                       {title}
                     </p>
                     <p className="text-cool-gray">

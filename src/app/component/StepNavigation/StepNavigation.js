@@ -1,3 +1,7 @@
+'use client'
+import { AppContext } from "@/app/Context/AppContext";
+import { useContext } from "react";
+
 const Step = ({ step, currentStep }) => {
   return (
     <div className="flex items-start lg:gap-5">
@@ -18,7 +22,8 @@ const Step = ({ step, currentStep }) => {
   );
 };
 
-const StepNavigation = ({ currentStep }) => {
+const StepNavigation = () => {
+  const [currentStep] = useContext(AppContext);
   const steps = [
     {
       title: "Your Info",
