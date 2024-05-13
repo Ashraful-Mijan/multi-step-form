@@ -10,7 +10,6 @@ import { useContext, useState } from "react";
 import { AppContext } from "@/app/Context/AppContext";
 
 const Form = () => {
-  //   const [currentStep, setCurrentStep] = useState(1);
   const [currentStep, setCurrentStep] = useContext(AppContext);
   const [formData, setFormData] = useState({
     name: "",
@@ -195,4 +194,3 @@ const Form = () => {
 };
 
 export default Form;
-// -translate-y-16 lg:translate-y-0
