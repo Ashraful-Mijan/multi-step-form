@@ -18,6 +18,7 @@ const StepOne = ({ formData, setFormData, error }) => {
       <div className="flex flex-col gap-4 lg:gap-8">
         <Input
           name="name"
+          type='text'
           error={error.name}
           value={formData["name"]}
           onChange={onChange}
@@ -26,6 +27,7 @@ const StepOne = ({ formData, setFormData, error }) => {
         />
         <Input
           name="email"
+          type='email'
           error={error.email}
           value={formData["email"]}
           onChange={onChange}
@@ -34,6 +36,7 @@ const StepOne = ({ formData, setFormData, error }) => {
         />
         <Input
           name="number"
+          type='number'
           error={error.number}
           value={formData["number"]}
           onChange={onChange}

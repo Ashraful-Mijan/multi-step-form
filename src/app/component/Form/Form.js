@@ -79,6 +79,13 @@ const Form = () => {
               errorMessages[err.path] = err.message;
             });
 
+            setErrors((prvError) => ({
+              ...prvError,
+              name: "",
+              email: "",
+              number: "",
+            }));
+
             setErrors((prvError) => ({ ...prvError, ...errorMessages }));
             isValid = true;
           }
@@ -130,7 +137,7 @@ const Form = () => {
 
   return (
     <>
-      <form className="flex flex-col gap-5 lg:gap-9 lg:h-full mx-5 lg:mx-0 px-4 lg:px-0 py-5 rounded-lg lg:rounded-none bg-white lg:bg-[transparent] h-max -translate-y-16 lg:translate-y-0">
+      <form noValidate className="flex flex-col gap-5 lg:gap-9 lg:h-full mx-5 lg:mx-0 px-4 lg:px-0 py-5 rounded-lg lg:rounded-none bg-white lg:bg-[transparent] h-max -translate-y-16 lg:translate-y-0">
         {getCurrentStep()}
         {currentStep < 5 && (
           <div className="hidden lg:flex justify-between items-center mt-auto">
